@@ -245,12 +245,18 @@ void LinkedList::reverse()
 
 LinkedList LinkedList::reverse() const
 {
-	return LinkedList();
+	LinkedList reversed = (*this);
+	reversed.reverse();
+
+	return reversed;
 }
 
 LinkedList LinkedList::getReverseList() const
 {
-	return LinkedList();
+	LinkedList reversed (*this);
+	reversed.reverse();
+
+	return reversed;
 }
 
 size_t LinkedList::size() const
